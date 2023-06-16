@@ -1,0 +1,45 @@
+.navbar {
+  margin: 10px 10px;
+}
+
+.subDiv {
+  display: flex;
+  align-items: flex-start;
+}
+
+.rightNavbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leftSideInfoTwo {
+  display: flex;
+  margin-top: 5rem;
+  margin-left: 5rem;
+  font-size: larger;
+  gap: 1rem;
+  flex-direction: column;
+  margin-bottom: 38px;
+}
+
+.leftsideInfoOne {
+  margin: 4rem 5rem;
+  font-size: -webkit-xxx-large;
+  font-weight: 600;
+}
+
+.leftSideInfoThree {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5rem;
+  gap: 1rem;
+  align-items: center;
+}
+
+.rightSideSection {
+  margin-left: 42rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: -27rem;
+}
