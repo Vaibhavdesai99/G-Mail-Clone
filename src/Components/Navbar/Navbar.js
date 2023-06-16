@@ -4,8 +4,9 @@ import gmail from "../Images/gmail-7250524-7250524@0.png";
 import gmailtwo from "../Images/google.png";
 import GmailIcon from "../Images/Daco_106653.png";
 import Inbox from "../Images/Gmail_2.jpg";
-import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+
 
 const Navbar = () => {
   return (
