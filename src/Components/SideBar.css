@@ -1,0 +1,6 @@
+.allsidebarMenu{
+    display: grid;
+    grid-row-gap: 18px;
+    width: fit-content;
+    margin-top: 2rem;
+}

@@ -4,6 +4,7 @@ import './ComposeMail.css'
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import SideBar from './SideBar';
 
 const ComposeMail = () => {
     const [editorState,setEditorState] =useState(EditorState.createEmpty())
@@ -82,7 +83,7 @@ const ComposeMail = () => {
   return (
     <div className='container'>
         <div className='sidebar'>
-              {/* import sidebar here */}
+              <SideBar/>
         </div>
         <div className='ComposeParentMailBox'>
             <div className='ChildBox1'>

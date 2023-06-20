@@ -1,0 +1,7 @@
+.ComposeParentMailBox {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 26rem;
+    margin-top: -14rem;
+}
