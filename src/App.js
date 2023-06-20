@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import SignUp from "./Components/Auth/SignUp/SignUp";
 import LogIn from "./Components/Auth/LogIn/LogIn";
 import WelcomeScreen from "./Components/WelcomeScreen";
+import Inbox from "./Components/Inbox";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/LogIn" element={<LogIn />} />
         <Route path="/WelcomeScreen" element={<WelcomeScreen/>}/>
+        <Route path="/Inbox" element={<Inbox/>}/>
       </Routes>
     </>
   );

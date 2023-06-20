@@ -7,11 +7,11 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import SideBar from './SideBar';
 
 const ComposeMail = () => {
-    const [editorState,setEditorState] =useState(EditorState.createEmpty())
+    const [editorState,setEditorState] = useState(()=> EditorState.createEmpty())
     const[receiver,setReceiver]=useState('')
     const [subject,setSubject]=useState('')
 
-    let url = 'https://emailbox-42ee5-default-rtdb.firebaseio.com';
+    let url = "https://mail-box-client-72ab7-default-rtdb.firebaseio.com/";
     const sender = localStorage.getItem('email').replace(/['@','.']/g,'')
     const sender1=localStorage.getItem('email')
 
@@ -40,7 +40,7 @@ const ComposeMail = () => {
         const response = await fetch(`${url}/Inbox/${receiver1}.json`,{
             method:'POST',
             body:JSON.stringify({
-                from:'sender1',
+                from:sender1,
                 subject:subject,
                 message:editorState.getCurrentContent().getPlainText(),
                 read:false
