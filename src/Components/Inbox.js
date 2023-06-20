@@ -50,7 +50,9 @@ const deleteHandler =(id)=>{
                             return(
                                 <tr key={item.id}>
                                  <td scope='row'>{index + 1}</td>
-                                 <td>{!item.read && <div style={{width:'10px',height:'10px',borderRadius:'100%',backgroundClip:'red'}}></div> }{item.from}</td>
+
+                                 {/* to show UNREAD MESSAGES  */}
+                                 <td>{!item.read && <div style={{width:'10px',height:'10px',borderRadius:'100%',backgroundColor:'red'}}></div> }{item.from}</td>
                                  <td>{item.subject}</td>
                                  <td><Link to={`/Inbox/${item.id}`}>Open Message </Link></td>
                                  <td><button type='button' class='btn btn-danger' onClick={deleteHandler.bind(null,item.id)}>delete</button></td>

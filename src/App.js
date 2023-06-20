@@ -6,6 +6,7 @@ import SignUp from "./Components/Auth/SignUp/SignUp";
 import LogIn from "./Components/Auth/LogIn/LogIn";
 import WelcomeScreen from "./Components/WelcomeScreen";
 import Inbox from "./Components/Inbox";
+import InboxMessage from "./Components/InboxMessage";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/LogIn" element={<LogIn />} />
         <Route path="/WelcomeScreen" element={<WelcomeScreen/>}/>
         <Route path="/Inbox" element={<Inbox/>}/>
+        <Route path="/Inbox/:Identifier" element={<InboxMessage/>}/>
       </Routes>
     </>
   );
