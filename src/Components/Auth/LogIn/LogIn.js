@@ -36,8 +36,9 @@ const LogIn = () => {
       if (response.ok) {
         const data = await response.json();
         toast.success("Successfully Logged In");
-        navigate("/EmailPage");
+        navigate("/WelcomeScreen");
         localStorage.setItem("idToken", data.idToken);
+        localStorage.setItem('email',data.email)
         console.log(data);
 
         // To clr input Fields
