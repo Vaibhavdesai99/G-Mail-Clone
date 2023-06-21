@@ -7,6 +7,8 @@ import LogIn from "./Components/Auth/LogIn/LogIn";
 import WelcomeScreen from "./Components/WelcomeScreen";
 import Inbox from "./Components/Inbox";
 import InboxMessage from "./Components/InboxMessage";
+import SentBox from "./Components/SentBox";
+import SentBoxMessage from "./Components/SentBoxMessage";
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path="/WelcomeScreen" element={<WelcomeScreen/>}/>
         <Route path="/Inbox" element={<Inbox/>}/>
         <Route path="/Inbox/:Identifier" element={<InboxMessage/>}/>
+        <Route path="/sentBox" element={<SentBox/>}/>
+        <Route path="sentBox/:Identifier" element={<SentBoxMessage/>}/>
       </Routes>
     </>
   );

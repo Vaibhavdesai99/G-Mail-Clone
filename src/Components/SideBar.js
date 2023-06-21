@@ -63,7 +63,7 @@ useEffect(()=>{
    <div className='allsidebarMenu'>
    <Link to='/welcomeScreen'><Button>Compose Mail</Button></Link> 
    <Link to='/Inbox'><Button>Inbox</Button>{unread}</Link> 
-    <Button>Sent</Button>
+    <Link to='/sentBox'><Button>Sent</Button></Link>
     <Button onClick={logOutHandler}>LogOut</Button>
    </div>
     </div>
