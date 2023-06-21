@@ -60,7 +60,7 @@ const LogIn = () => {
   return (
     <form className="LogInForm">
       <div className="form">
-        <div className="title">LogIn</div>
+        <div className="titlee" >LogIn</div>
         <div className="Email">
           <label>Email</label>
           <input type="email" ref={email} />

@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React,{useEffect , useState} from 'react'
 import { Link } from 'react-router-dom'
 import { InboxActions } from './ReduxStore/InboxReducer'
 import './Inbox.css'
@@ -6,6 +6,8 @@ import SideBar from './SideBar/SideBar'
 import { useDispatch,useSelector } from 'react-redux'
 const Inbox = () => {
     const dispatch = useDispatch()
+    const [search , setSearch]= useState('')
+    console.log(search)
     const InboxData = useSelector(state => state.inboxReducer.inboxData)
     const updateCounterOnDelete = useSelector(state => state.inboxReducer.unread)
 
@@ -42,12 +44,24 @@ useEffect(() => {
 
 
 
+
+  // Filter InboxData based on search input:
+  const filteredInboxData = InboxData.filter((item)=>{
+    if(!search)
+    {
+      return true;
+    }else{
+     return  item.from.toLowerCase().includes(search.toLowerCase())
+    }
+  })
+
   return (
     <div className='ParentBox'>
         <div className='Sidebar'>
             <SideBar/>
         </div>
         <div className='tableParent'>
+          <input type='search'style={{marginBottom:'2rem' , border:'1px solid'}}  placeholder='Search By Name' onChange={(e)=>setSearch(e.target.value)}/>
         <div className="InboxBoxName">INBOX</div>
                <table className='table'>
                       <thead>
@@ -60,7 +74,7 @@ useEffect(() => {
                         </tr>
                       </thead>
                       <tbody>
-                        {InboxData.map((item,index)=>{
+                        {filteredInboxData.map((item,index)=>{
                             return(
                                 <tr key={item.id}>
                                   {/* index+1 caz it starting from zero so index + 1 = 1 */}

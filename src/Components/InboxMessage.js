@@ -2,7 +2,8 @@ import React from 'react'
 import './InboxMessage.css'
 // import SideBar from './SideBar'
 import { useSelector} from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useParams,Link } from 'react-router-dom'
+import { Button } from 'react-bootstrap'
 import { useEffect } from 'react'
 const InboxMessage = () => {
   const {Identifier} =useParams();
@@ -40,7 +41,10 @@ useEffect(()=>{
 },[])
 
   return (
-    <div className='ParentBox' style={{margin:'3rem 3rem'}}>
+    <div className='SentMessages'>
+      <Link to="/Inbox">
+        <Button>Back to Inbox</Button>
+      </Link>
       <div className='ChildBox'>
       <p>FROM :- {user}</p>
       <p>Message :- {sigleMsg}</p>

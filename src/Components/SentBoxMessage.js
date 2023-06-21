@@ -13,9 +13,9 @@ const SentBoxMessage = () => {
 
   const user = singleMessage[0].to;
   return (
-    <div className="ParentBox">
+    <div className="SentMessages">
       <Link to="/sentBox">
-        <Button>Back</Button>
+        <Button>Back to sent</Button>
       </Link>
       <div className="ToSentBoxInfo">
         <p>To : - {user}</p>

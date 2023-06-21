@@ -61,7 +61,7 @@ const SentBox = () => {
       <div className="Sidebar">
         <SideBar />
       </div>
-      <div className="tableParent">
+      <div className="tableParentt">
         <div className="SentBoxName">SENT BOX</div>
         <table className="table">
           <thead>
