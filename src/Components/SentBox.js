@@ -1,6 +1,6 @@
 import React from "react";
 import "./SentBox.css";
-import SideBar from "./SideBar";
+import SideBar from "./SideBar/SideBar";
 import { sentBoxAction } from "./ReduxStore/SentBoxReducer";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";

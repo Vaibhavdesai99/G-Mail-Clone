@@ -2,7 +2,7 @@ import React,{useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { InboxActions } from './ReduxStore/InboxReducer'
 import './Inbox.css'
-import SideBar from './SideBar'
+import SideBar from './SideBar/SideBar'
 import { useDispatch,useSelector } from 'react-redux'
 const Inbox = () => {
     const dispatch = useDispatch()

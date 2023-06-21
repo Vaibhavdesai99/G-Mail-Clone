@@ -4,7 +4,7 @@ import './ComposeMail.css'
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import SideBar from './SideBar';
+import SideBar from '../SideBar/SideBar';
 
 const ComposeMail = () => {
     const [editorState,setEditorState] = useState(()=> EditorState.createEmpty())
@@ -88,13 +88,16 @@ const ComposeMail = () => {
         <div className='ComposeParentMailBox'>
             <div className='ChildBox1'>
                <div>
-                To:
+                To:-
                </div>
-             <input type='email' placeholder='Enter Email here' onChange={receiverHandler} value={receiver}/>
+               <div className='sideDiv'> 
+               <input type='email' placeholder='Enter Email Id' onChange={receiverHandler} value={receiver}/>
              <button className='btn btn-primary' onClick={submitHandler}>Send</button>
+               </div>
+           
             </div>
             <div className='childBox2'>
-               <div>subject : </div>
+               <div>Subject :- </div>
                <input type='text' value={subject} onChange={subjectHandler}/>
             </div>
           <div className='childBox3'>
