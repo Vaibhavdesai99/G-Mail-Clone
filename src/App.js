@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route index element={<Navbar />} />
+        <Route index path='/Home' element={<Navbar />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/LogIn" element={<LogIn />} />
         <Route path="/WelcomeScreen" element={<WelcomeScreen/>}/>

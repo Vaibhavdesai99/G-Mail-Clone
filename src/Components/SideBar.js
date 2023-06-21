@@ -9,7 +9,7 @@ const SideBar = () => {
     const dispatch = useDispatch()
     const unread = useSelector(state =>state.inboxReducer.unread)
     const getRequest=useSelector(state =>state.inboxReducer.getReq)
-    const[render,setRender]=useState(true)
+    
 
 
     let url =  "https://mail-box-client-72ab7-default-rtdb.firebaseio.com/"
@@ -46,15 +46,16 @@ const SideBar = () => {
         dispatch(authActions.logOut())
     }
 
-    const id =setInterval(()=>{
-        setRender(!render)
-    },2000)
-
+   
+// getData func will call after every 2 sec : so new mail render on UI without refresh.
 useEffect(()=>{
-    getData();
-    return ()=>{
-        clearInterval(id)
-    }
+    const intervalId = setInterval(()=>{
+        getData();
+    },2000)
+   
+    return () => {
+        clearInterval(intervalId);
+      };
 },[])
 
   return (
@@ -64,7 +65,7 @@ useEffect(()=>{
    <Link to='/welcomeScreen'><Button>Compose Mail</Button></Link> 
    <Link to='/Inbox'><Button>Inbox</Button>{unread}</Link> 
     <Link to='/sentBox'><Button>Sent</Button></Link>
-    <Button onClick={logOutHandler}>LogOut</Button>
+   <Link to='/Home'><Button onClick={logOutHandler}>LogOut</Button></Link> 
    </div>
     </div>
   )
