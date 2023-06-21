@@ -1,0 +1,16 @@
+.tableParent{
+    width: 74%;
+    margin-left: 18rem;
+    margin-top: -19rem;
+}
+.dotDesign{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: red;
+    margin-left: -2rem;
+    /* display: inline-block; */
+    /* display: flex; */
+    position: relative;
+    top: 19px;
+}

@@ -48,10 +48,11 @@ useEffect(() => {
             <SideBar/>
         </div>
         <div className='tableParent'>
+        <div className="InboxBoxName">INBOX</div>
                <table className='table'>
                       <thead>
                         <tr>
-                            <th scope='col'>#</th>
+                            <th scope='col'>No.</th>
                             <th scope='col'>From</th>
                             <th scope='col'>Subject</th>
                             <th scope='col'>Message</th>
@@ -66,11 +67,11 @@ useEffect(() => {
                                  <td scope='row'>{index + 1}</td>
 
                                  {/* to show UNREAD MESSAGES  */}
-                                 <td>{!item.read && <div style={{width:'10px',height:'10px',borderRadius:'100%',backgroundColor:'red'}}></div> }{item.from}</td>
+                                 <td>{!item.read && <div className='dotDesign'></div> }{item.from}</td>
                                  <td>{item.subject}</td>
 
                                  {/* To View Specific Email  */}
-                                 <td><Link to={`/Inbox/${item.id}`}>Open Message </Link></td>
+                                 <td><Link to={`/Inbox/${item.id}`}>View Message </Link></td>
 
                                  {/* Passing id to delete sepcific Email  */}
                                  <td><button type='button' class='btn btn-danger' onClick={deleteHandler.bind(null,item.id)}>delete</button></td>

@@ -3,9 +3,9 @@ import './WelcomeScreen.css'
 import PersonIcon from '@mui/icons-material/Person';
 import ComposeMail from '../ComposeMail/ComposeMail'
 import gmailImg from '../Images/Daco_106653.png'
-import { useSelector } from 'react-redux';
 const WelcomeScreen = () => {
-  const LoggedInUserName = useSelector(state =>state.auth.email)
+  
+  const LoggedInUserName = localStorage.getItem('email')
   // console.log(LoggedInUserName)
     return (
       <>
@@ -15,8 +15,6 @@ const WelcomeScreen = () => {
         <div ><PersonIcon style={{width:'100%'}}></PersonIcon></div>
         <div style={{color:'blueviolet'}}>{LoggedInUserName}</div>
         </div>
-      
-    
       </div>
       <hr></hr>
       <ComposeMail/>

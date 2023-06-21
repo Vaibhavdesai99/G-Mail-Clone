@@ -40,7 +40,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <div className='ParentBox'>
+    <div className='ParentBox' style={{margin:'3rem 3rem'}}>
       <div className='ChildBox'>
       <p>FROM :- {user}</p>
       <p>Message :- {sigleMsg}</p>

@@ -1,0 +1,6 @@
+.SentBoxName{
+    margin-bottom: 1rem;
+    /* font-weight: 900; */
+    font-family: initial;
+    border-bottom: 3px solid black;
+}

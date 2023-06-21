@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import './ComposeMail.css'
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
@@ -28,7 +29,9 @@ const ComposeMail = () => {
                 headers:{
                     'Content-Type':'application/json'
                 }
+              
             })
+            toast.success('Mail Sent Successfully')
         } catch (error) {
             alert(error)
         }
@@ -106,6 +109,7 @@ const ComposeMail = () => {
          onEditorStateChange={EditorStateChangeHandler}/>
           </div>
         </div>
+        <ToastContainer/>
     </div>
   )
 }

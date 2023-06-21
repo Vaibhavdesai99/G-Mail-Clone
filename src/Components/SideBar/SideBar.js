@@ -61,7 +61,7 @@ const SideBar = () => {
 
   return (
     <div className="SideBarContainer" style={{ marginTop: "2rem" }}>
-      <div style={{fontWeight:'bold'}}>ALL MAILS</div>
+     
       <div className="allsidebarMenu">
         <Link to="/welcomeScreen">
           <Button className="composebtn" startIcon={<AddIcon />}>

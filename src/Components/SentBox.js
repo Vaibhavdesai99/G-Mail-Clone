@@ -62,10 +62,11 @@ const SentBox = () => {
         <SideBar />
       </div>
       <div className="tableParent">
+        <div className="SentBoxName">SENT BOX</div>
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">No.</th>
               <th scope="col">To</th>
               <th scope="col">Subject</th>
               <th scope="col">Message</th>
@@ -87,7 +88,7 @@ const SentBox = () => {
 
                   {/* To View Specific Email  */}
                   <td>
-                    <Link to={`/SentBox/${item.id}`}>Open Message </Link>
+                    <Link to={`/SentBox/${item.id}`}>View Message </Link>
                   </td>
 
                   {/* Passing id to delete sepcific Email  */}
