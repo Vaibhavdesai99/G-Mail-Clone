@@ -13,19 +13,19 @@ const Navbar = () => {
     <div className="navbar">
       <nav className="subDiv">
         <div className="leftNavBar">
-          <img src={GmailIcon} style={{ width: "10%" }} alt="img" />
+          <img src={GmailIcon} style={{ width: "10%" }}  className='imgsrc' alt="img" />
         </div>
         <div className="rightNavbar">
           <div>For WORK</div>
           <Link to="/LogIn">
-            <div>
-              <Button>Sign In</Button>
+            <div className="btn1">
+              <Button >Sign In</Button>
             </div>
           </Link>
 
           <Link to="/SignUp">
-            <div>
-              <Button varient="primary">Create Account</Button>
+            <div className='btn1'>
+              <Button   varient="primary">Create Account</Button>
             </div>
           </Link>
         </div>

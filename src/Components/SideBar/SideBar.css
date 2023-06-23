@@ -11,3 +11,17 @@
     border-radius: 29px !important;
     box-shadow: 2px 2px 3px blue !important;
 }
+
+@media screen and (max-width: 480px) {
+    .allsidebarMenu{
+        display: flex;
+        margin: 0rem 0rem;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: baseline;
+        flex-direction: row;
+    }
+    }
+
+
