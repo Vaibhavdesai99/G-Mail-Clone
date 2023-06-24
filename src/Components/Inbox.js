@@ -57,7 +57,7 @@ const Inbox = () => {
       <div className="Sidebar">
         <SideBar />
       </div>
-      <div className="tableParent">
+      <div className="tablePParent">
         <input
           type="search"
           style={{ marginBottom: "2rem", border: "1px solid" }}
